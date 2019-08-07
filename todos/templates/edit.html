@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="/todos/{{todo.id}}/update/" class="m-5">
+    <div class="form-group">
+        <label for="title">Todo</label>
+        <input type="text" class="form-control" value="{{todo.title}}" id="title" name="title">
+    </div>
+    <div class="form-group">
+        <label for="content">Content</label>
+        <input type="text" class="form-control" value="{{todo.content}}" id="content" name="content">
+    </div>
+    <div class="form-group">
+        <label for="due-date">Due Date</label>
+        <input type="date" class="form-control" value="{{todo_date}}" id="due-date" name="due-date">
+        <!-- {{todo.due_date|date:'Y-m-d'}} -->
+    </div>
+    <button type="submit" class="btn btn-warning">수정</button>
+</form>
+{% endblock %}

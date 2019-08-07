@@ -16,7 +16,16 @@
             <th scope="row">{{todo.id}}</th>
             <td>{{todo.title}}</td>
             <td>{{todo.due_date}}</td>
-            <td>@mdo</td>
+            <td>
+                <a href="/todos/{{todo.id}}/" class="btn btn-primary">글보기</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <th>#</th>
+            <td>할일이비었습니다.</td>
+            <td>-</td>
+            <td>-</td>
         </tr>
         {% endfor %}
     </tbody>
