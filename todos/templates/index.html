@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">DueDate</th>
+            <th scope="col">Buttons</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for todo in todos %}
+        <tr>
+            <th scope="row">{{todo.id}}</th>
+            <td>{{todo.title}}</td>
+            <td>{{todo.due_date}}</td>
+            <td>@mdo</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
